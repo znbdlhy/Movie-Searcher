@@ -16,16 +16,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r4p-Kv-snH">
-                                <rect key="frame" x="102" y="105" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r4p-Kv-snH">
+                                <rect key="frame" x="20" y="57" width="350" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WFa-t7-FpE">
+                                <rect key="frame" x="10" y="101" width="370" height="699"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="r4p-Kv-snH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="JjO-CC-zmE"/>
+                            <constraint firstItem="WFa-t7-FpE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Od3-SH-Cn1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WFa-t7-FpE" secondAttribute="bottom" constant="10" id="PA1-8R-XFa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r4p-Kv-snH" secondAttribute="trailing" constant="20" id="PlK-0N-YYK"/>
+                            <constraint firstItem="r4p-Kv-snH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Zba-ux-yc9"/>
+                            <constraint firstItem="WFa-t7-FpE" firstAttribute="top" secondItem="r4p-Kv-snH" secondAttribute="bottom" constant="10" id="dN6-fK-CBo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WFa-t7-FpE" secondAttribute="trailing" constant="10" id="nsw-r0-zqT"/>
+                            <constraint firstItem="WFa-t7-FpE" firstAttribute="top" secondItem="r4p-Kv-snH" secondAttribute="bottom" constant="10" id="rNC-TC-OWy"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="field" destination="r4p-Kv-snH" id="XJb-CM-yu9"/>
+                        <outlet property="table" destination="WFa-t7-FpE" id="tQI-lV-f7D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
